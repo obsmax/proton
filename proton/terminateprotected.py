@@ -4,7 +4,7 @@ import signal
 import sys
 
 
-class TerminateProtected:
+class TerminateProtected(object):
     """ Protect a piece of code from being killed by SIGINT or SIGTERM.
     It can still be killed by a force kill.
 
@@ -35,7 +35,7 @@ class TerminateProtected:
         if self.killed:
             # the interruption signal has occured inside the contextual manager
             # do not execute operations after leaving it
-            sys.exit(0)
+            sys.exit(1)
 
         # reset the original handlers
         signal.signal(signal.SIGINT, self.backup_sigint_handler)
@@ -43,11 +43,16 @@ class TerminateProtected:
 
 
 if __name__ == '__main__':
-    print("Try pressing ctrl+c while the sleep is running!")
+
     from time import sleep
 
     with TerminateProtected():
+        # start a process whatever
+        print("Please try pressing ctrl+c while the sleep is running!")
         sleep(10)
+
+        # these operations will run even though user has pressed ctrl+c
         print("Finished anyway!")
 
+    # these operations won't run if the user has pressed ctrl+c
     print("This only prints if there was no sigint or sigterm")

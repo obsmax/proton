@@ -2,7 +2,7 @@ import time
 import signal
 
 
-class TimeOut(Exception):
+class TimeOutError(Exception):
     pass
 
 
@@ -14,7 +14,7 @@ class TimeLimiter(object):
             raise ValueError('sec must be >= 1')
 
     def raise_timeout(self, *args):
-        raise TimeOut()
+        raise TimeOutError()
 
     def __enter__(self):
         signal.signal(signal.SIGALRM, self.raise_timeout)
