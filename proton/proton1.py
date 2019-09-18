@@ -1,7 +1,7 @@
 from __future__ import print_function
 from multiprocessing import Process, Lock, RLock, Pipe, Value, cpu_count
-from signalcatcher import SignalCatcher
-from timelimiter import TimeLimiter
+from proton.execution.signalcatcher import SignalCatcher
+from proton.execution.timelimiter import TimeLimiter
 import random
 import sys, traceback
 import warnings
