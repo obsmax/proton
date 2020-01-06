@@ -4,7 +4,7 @@ from proton.multipro.messages import Message, MessageQueue, BasicPrinter
 from proton.multipro.ioqueue import InputQueue, OutputQueue
 from proton.multipro.target import Target
 from proton.multipro.jobs import JobFeeder, Job
-import time
+import time, random
 import os
 
 
@@ -90,7 +90,7 @@ class MapAsync(Mapper):
             "    Printer pid = {printer_pid}\n".format(
             ppid=self.ppid,
             generator_pid=self.job_feeder.pid,
-            printer_pid=self.printer.pid)
+            printer_pid=self.printer.pid if self.printer is not None else -1)
 
         for worker in self.workers:
             s += "    {}  pid = {}; seed = {}\n".format(worker.name, worker.pid, worker.seed)
@@ -101,11 +101,13 @@ class MapAsync(Mapper):
         for worker in self.workers:
             worker.start()
         self.job_feeder.start()
-        self.printer.start()
+        if self.printer is not None:
+            self.printer.start()
 
         self.pids = [worker.pid for worker in self.workers]
         self.pids.append(self.job_feeder.pid)
-        self.pids.append(self.printer.pid)
+        if self.printer is not None:
+            self.pids.append(self.printer.pid)
 
         self.settask()
         self.renice()
@@ -126,7 +128,8 @@ class MapAsync(Mapper):
             self.output_queue.close()
             if self.verbose:
                 self.message_queue.close()
-            self.printer.join()
+            if self.printer is not None:
+                self.printer.join()
         else:
             # either an error has occured or the user leaves too soon
             # if self.verbose:print "killing workers and queues"
@@ -139,7 +142,8 @@ class MapAsync(Mapper):
             for worker in self.workers:
                 worker.terminate()
             self.job_feeder.terminate()
-            self.printer.terminate()
+            if self.printer is not None:
+                self.printer.terminate()
 
     def settask(self):
         if self.taskset is None:
@@ -215,7 +219,6 @@ class MapAsync(Mapper):
 
 
 if __name__ == '__main__':
-    import random
 
     def job_generator():
 

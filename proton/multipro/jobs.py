@@ -41,8 +41,11 @@ class JobFeeder(Process):
                 if not isinstance(job, Job):
                     raise TypeError('the job_generator must yield Job objects, got {}'.format(str(type(job))))
 
+            except StopIteration:
+                break
+
             except BaseException as e:
-                error = GeneratorError(str(e))  # change the error class, required by the worker
+                error = GeneratorError(str(type(e)) + " " + str(e))  # change the error class, required by the worker
                 self.input_queue.put(error)
 
                 if self.verbose:

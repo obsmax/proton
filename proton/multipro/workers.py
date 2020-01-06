@@ -16,11 +16,37 @@ class WorkerOutput(object):
         self.generator_time = generator_time
         self.processor_time = processor_time
 
+    def elapsed_generator_time(self):
+        try:
+            return self.generator_time[1] - self.generator_time[0]
+        except (IndexError, KeyError):
+            return -1.0
+        except:
+            raise Exception('unexpected case')
+
+    def elapsed_processor_time(self):
+        try:
+            return self.processor_time[1] - self.processor_time[0]
+        except (IndexError, KeyError):
+            return -1.0
+        except:
+            raise Exception('unexpected case')
+
     def __repr__(self):
         return self.__str__()
 
     def __str__(self):
-        return "{} {} {} {}".format(self.jobid, self.answer, self.generator_time, self.processor_time)
+        return "{classname}: " \
+               "job:{jobid}\n\t" \
+               "gentime:{elapsed_generator_time:.2f}ms\n\t" \
+               "protime:{elapsed_processor_time:.2f}ms\n\t" \
+               "answer:{answer}" \
+               "".format(
+            classname=self.__class__.__name__,
+            jobid=self.jobid,
+            answer=str(self.answer).split('\n')[0],
+            elapsed_generator_time=self.elapsed_generator_time() * 1.e6,
+            elapsed_processor_time=self.elapsed_processor_time() * 1.e6)
 
 
 class Worker(Process):
