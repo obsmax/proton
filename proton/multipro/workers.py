@@ -82,7 +82,12 @@ class Worker(Process):
             return [self.rand_() for i in range(N)]
 
     def communicate(self, message):  # !#
-        self.messagequeue.put((self.name, time.time(), message, None))  # !#
+        message = Message(
+            sender_name=self.name,
+            time_value=time.time(),
+            message=message,
+            jobid=None)
+        self.messagequeue.put(message)
 
     def run(self):
         """gets jobs from the inputqueue and runs it until
@@ -147,13 +152,15 @@ class Worker(Process):
                 nfail += 1
                 errtype, errvalue, errtrace = sys.exc_info()
                 message = "Worker {} failed while executing job {}\n".format(self.name, job._jobid)
-                message += "    " + "    ".join(traceback.format_exception(errtype, errvalue, errtrace, limit=10))
+                message += "    " + "    ".join(traceback.format_exception(
+                    etype=errtype, value=errvalue, tb=errtrace, limit=10))
 
-                self.outputqueue.put(WorkerError(
+                output = WorkerError(
                     message=message,
                     errtype=errtype,
-                    errvalue=errvalue,
-                    errtrace=errtrace))
+                    errvalue=errvalue)
+
+                self.outputqueue.put(output)
 
                 if errtype not in self.ignore_exceptions:
                     self.inputqueue.put(EndingSignal())  # send the ending signal for the other workers

@@ -21,7 +21,9 @@ class MapAsync(Mapper):
                  nworkers=12, taskset=None,
                  verbose=False, lowpriority=False):
 
-        self.ignore_exceptions = ignore_exceptions if ignore_exceptions is not None else []
+        self.ignore_exceptions = \
+            ignore_exceptions if ignore_exceptions is not None else []
+
         for exception in self.ignore_exceptions:
             assert isinstance(exception, type)
             assert issubclass(exception, Exception)
@@ -34,6 +36,7 @@ class MapAsync(Mapper):
 
         # -----------
         self.message_queue = None
+        self.printer = None
 
         if self.verbose:
             self.message_queue = MessageQueue(maxsize=1000)
@@ -80,9 +83,11 @@ class MapAsync(Mapper):
     def __str__(self):
         s = "----------------------------\n" \
             "Parent pid = {ppid}\n" \
-            "    Generator pid = {generator_pid}\n".format(
+            "    Generator pid = {generator_pid}\n" \
+            "    Printer pid = {printer_pid}\n".format(
             ppid=self.ppid,
-            generator_pid=self.job_feeder.pid)
+            generator_pid=self.job_feeder.pid,
+            printer_pid=self.printer.pid)
 
         for worker in self.workers:
             s += "    {}  pid = {}; seed = {}\n".format(worker.name, worker.pid, worker.seed)
@@ -93,13 +98,14 @@ class MapAsync(Mapper):
         for worker in self.workers:
             worker.start()
         self.job_feeder.start()
+        self.printer.start()
 
         self.pids = [worker.pid for worker in self.workers]
         self.pids.append(self.job_feeder.pid)
+        self.pids.append(self.printer.pid)
+
         self.settask()
         self.renice()
-
-        self.pids.append(self.printer.pid)
 
         return self
 
@@ -117,7 +123,7 @@ class MapAsync(Mapper):
             self.output_queue.close()
             if self.verbose:
                 self.message_queue.close()
-
+            self.printer.join()
         else:
             # either an error has occured or the user leaves too soon
             # if self.verbose:print "killing workers and queues"
@@ -130,6 +136,7 @@ class MapAsync(Mapper):
             for worker in self.workers:
                 worker.terminate()
             self.job_feeder.terminate()
+            self.printer.terminate()
 
     def settask(self):
         if self.taskset is None:
@@ -178,7 +185,8 @@ class MapAsync(Mapper):
                     fid.write(str(packet) + "\n")
 
                 self.communicate(str(packet))
-                if packet.errtype not in self.ignore_exceptions:
+                message, errtype, errvalue = packet.args
+                if errtype not in self.ignore_exceptions:
                     # fatal error
                     raise packet
 
@@ -199,7 +207,7 @@ class MapAsync(Mapper):
                 message="got EndingSignal",
                 jobid=None)
             self.message_queue.put(message)
-
+            self.message_queue.put(EndingSignal())
         raise StopIteration
 
 
@@ -208,22 +216,23 @@ if __name__ == '__main__':
 
     def job_generator():
         for n in range(32):
-            yield Job(t=1. + random.random())
+            yield Job(t=1.)
 
-    def fun(t):
+    def fun(worker, t):
         start = time.time()
         while time.time() - start < t:
             0 + 0
-
+        worker.communicate('I am fine, ' + str(t))
+        raise ValueError('skip me')
         return t
 
     with MapAsync(
         function_or_instance=fun,
         job_generator=job_generator(),
-        ignore_exceptions=None,
+        ignore_exceptions=(ValueError, NameError),
         nworkers=8,
         verbose=True) as ma:
 
         print(ma)
         for _ in ma:
-            ma.communicate(_)
+            pass

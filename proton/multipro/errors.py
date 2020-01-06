@@ -11,10 +11,18 @@ class GeneratorError(Exception):
 
 
 class WorkerError(Exception):
-    def __init__(self, message, errtype, errvalue, errtrace):
+    def __init__(self, message, errtype, errvalue):
         super(WorkerError, self).__init__()
-        self.args = (message, )
-        self.message = message
-        self.errtype = errtype
-        self.errvalue = errvalue
-        self.errtrace = errtrace
+        self.args = (message, errtype, errvalue)
+
+    def __str__(self):
+        message, errtype, errvalue = self.args
+        return "{}: {}, {}".format(errtype, errvalue, message)
+
+
+if __name__ == '__main__':
+    w = WorkerError(
+        message='toto',
+        errtype=Exception,
+        errvalue='dfsdf')
+

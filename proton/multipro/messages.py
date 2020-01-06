@@ -4,8 +4,6 @@ from proton.communication.printcolors import printblue
 from proton.multipro.errors import EndingSignal
 import time
 
-printer = printblue
-
 
 class Message(object):
     def __init__(self, sender_name=None, time_value=None, message=None, jobid=None):
@@ -18,19 +16,20 @@ class Message(object):
         return self.__str__()
 
     def __str__(self):
-        s = "{time:8s}: {sender_name:>30s}(job:{jobid:4d}): {message}".format(
+        s = "{time:8s}: {sender_name:<12s}(job:{jobid:4s}): {message}".format(
             sender_name=self.sender_name,
             time=time.ctime(self.time_value).split()[3],
-            jobid=self.jobid,
+            jobid=str(self.jobid),
             message=self.message)
+        s = s.replace('(job:None)', '          ')
         return s
 
 
 class MessageQueue(BasicQueue):
 
     def put(self, message, **kwargs):
-        assert isinstance(message, Message)
-        super().put(message, **kwargs)
+        assert isinstance(message, Message) or isinstance(message, EndingSignal)
+        super(MessageQueue, self).put(message, **kwargs)
 
 
 class Printer(Process):
@@ -40,18 +39,20 @@ class Printer(Process):
 class BasicPrinter(Printer):
     """standard printing to stdout"""
 
+    printer = printblue
+
     def __init__(self, messagequeue):
         Process.__init__(self)
         self.messagequeue = messagequeue
 
-    def communicate(self, message):
-        print(message)
+    def communicate(self, *args, **kwargs):
+        self.printer(*args, **kwargs)
 
     def run(self):
         while True:
             message = self.messagequeue.get()
             if isinstance(message, Message):
-                print(str(message))
+                self.communicate(str(message))
             elif isinstance(message, EndingSignal):
                 return
             else:
