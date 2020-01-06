@@ -1,0 +1,1450 @@
+<class 'ValueError'>: skip me, Worker Worker_0003 failed while executing job 3
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0006 failed while executing job 6
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0002 failed while executing job 2
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0007 failed while executing job 7
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0005 failed while executing job 5
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0004 failed while executing job 4
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0001 failed while executing job 1
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0008 failed while executing job 8
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0001 failed while executing job 9
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0002 failed while executing job 10
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0003 failed while executing job 11
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0006 failed while executing job 12
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0005 failed while executing job 13
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0007 failed while executing job 14
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0004 failed while executing job 15
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0008 failed while executing job 16
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0001 failed while executing job 17
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0002 failed while executing job 18
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0003 failed while executing job 19
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0006 failed while executing job 20
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0005 failed while executing job 21
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0004 failed while executing job 22
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0008 failed while executing job 24
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0007 failed while executing job 23
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0001 failed while executing job 25
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0007 failed while executing job 7
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0004 failed while executing job 4
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0008 failed while executing job 8
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0002 failed while executing job 2
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0003 failed while executing job 3
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0001 failed while executing job 1
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0006 failed while executing job 6
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0005 failed while executing job 5
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0003 failed while executing job 9
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0007 failed while executing job 12
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0001 failed while executing job 10
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0004 failed while executing job 13
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0008 failed while executing job 14
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0002 failed while executing job 11
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0005 failed while executing job 16
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0006 failed while executing job 15
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0003 failed while executing job 17
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0002 failed while executing job 18
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0007 failed while executing job 19
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0001 failed while executing job 20
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0004 failed while executing job 21
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0006 failed while executing job 22
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0008 failed while executing job 23
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0005 failed while executing job 24
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0002 failed while executing job 26
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0003 failed while executing job 25
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0002 failed while executing job 2
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0001 failed while executing job 1
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0005 failed while executing job 5
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0004 failed while executing job 4
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0006 failed while executing job 6
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0003 failed while executing job 3
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0007 failed while executing job 7
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0008 failed while executing job 8
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0002 failed while executing job 9
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0005 failed while executing job 11
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0001 failed while executing job 10
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0007 failed while executing job 12
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0004 failed while executing job 13
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0006 failed while executing job 14
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0003 failed while executing job 15
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0008 failed while executing job 16
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0002 failed while executing job 17
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0007 failed while executing job 20
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0001 failed while executing job 19
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0006 failed while executing job 22
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0004 failed while executing job 21
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0003 failed while executing job 23
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0008 failed while executing job 24
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0005 failed while executing job 18
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0002 failed while executing job 25
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0005 failed while executing job 26
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0007 failed while executing job 27
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0001 failed while executing job 28
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0006 failed while executing job 29
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0004 failed while executing job 30
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0005 failed while executing job 5
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0008 failed while executing job 8
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0004 failed while executing job 4
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0006 failed while executing job 6
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0002 failed while executing job 2
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0007 failed while executing job 7
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0003 failed while executing job 3
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0001 failed while executing job 1
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0001 failed while executing job 9
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0006 failed while executing job 10
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0005 failed while executing job 11
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0002 failed while executing job 13
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0007 failed while executing job 12
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0004 failed while executing job 14
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0008 failed while executing job 15
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0003 failed while executing job 16
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0001 failed while executing job 17
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0006 failed while executing job 18
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0002 failed while executing job 20
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0005 failed while executing job 19
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0007 failed while executing job 21
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0004 failed while executing job 22
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0008 failed while executing job 23
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0003 failed while executing job 24
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0001 failed while executing job 25
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0006 failed while executing job 26
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0005 failed while executing job 5
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0007 failed while executing job 7
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0002 failed while executing job 2
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0004 failed while executing job 4
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0001 failed while executing job 1
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0006 failed while executing job 6
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0008 failed while executing job 8
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0003 failed while executing job 3
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0001 failed while executing job 10
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0002 failed while executing job 9
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0004 failed while executing job 11
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0005 failed while executing job 12
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0003 failed while executing job 13
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0006 failed while executing job 14
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0008 failed while executing job 15
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0007 failed while executing job 16
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0004 failed while executing job 18
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0005 failed while executing job 19
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0002 failed while executing job 20
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0003 failed while executing job 21
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0006 failed while executing job 22
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0001 failed while executing job 17
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0008 failed while executing job 23
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0007 failed while executing job 24
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0001 failed while executing job 25
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0004 failed while executing job 26
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0005 failed while executing job 27
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 231, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0003 failed while executing job 16
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 232, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'TypeError'>: skip me, Worker Worker_0001 failed while executing job 1
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 236, in fun
+    raise TypeError('skip me')
+    TypeError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0003 failed while executing job 3
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 232, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'NameError'>: skip me, Worker Worker_0001 failed while executing job 1
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 234, in fun
+    raise NameError('skip me')
+    NameError: skip me
+
+<class 'NameError'>: skip me, Worker Worker_0005 failed while executing job 11
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 234, in fun
+    raise NameError('skip me')
+    NameError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0006 failed while executing job 14
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 232, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'TypeError'>: skip me, Worker Worker_0007 failed while executing job 15
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 236, in fun
+    raise TypeError('skip me')
+    TypeError: skip me
+
+<class 'ValueError'>: skip me, Worker Worker_0002 failed while executing job 2
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 232, in fun
+    raise ValueError('skip me')
+    ValueError: skip me
+
+<class 'NameError'>: skip me, Worker Worker_0005 failed while executing job 5
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 234, in fun
+    raise NameError('skip me')
+    NameError: skip me
+
+<class 'NameError'>: skip me, Worker Worker_0003 failed while executing job 20
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 234, in fun
+    raise NameError('skip me')
+    NameError: skip me
+
+<class 'NameError'>: skip me, Worker Worker_0004 failed while executing job 22
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/multipro/workers.py", line 142, in run
+    self, *job.args, **job.kwargs)
+      File "/home/max/prog/git/proton/proton/multipro/target.py", line 56, in __call__
+    return self.function_or_instance(*args, **kwargs)
+      File "mappers.py", line 234, in fun
+    raise NameError('skip me')
+    NameError: skip me
+

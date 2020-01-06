@@ -2,7 +2,7 @@ from multiprocessing import Process
 from typing import Union
 from proton.multipro.messages import MessageQueue, Message
 from proton.multipro.ioqueue import InputQueue
-from proton.multipro.errors import EndingSignal
+from proton.multipro.errors import EndingSignal, GeneratorError
 import time
 
 
@@ -28,21 +28,42 @@ class JobFeeder(Process):
         self.verbose = self.message_queue is not None
 
     def run(self):
-        gen_begin = time.time()
         # operates in the generator workspace
-        for jobid, job in enumerate(self.job_generator):
-            gen_end = time.time()
-            assert isinstance(job, Job)
-            job._jobid = jobid   # attribute the jobid now and once for all
-            job._gentime = (gen_begin, gen_end)
+        jobid = 0
+        while True:
+            try:
+                gen_begin = time.time()
+                job = self.job_generator.__next__()
+                gen_end = time.time()
 
+                jobid += 1
+
+                if not isinstance(job, Job):
+                    raise TypeError('the job_generator must yield Job objects, got {}'.format(str(type(job))))
+
+            except BaseException as e:
+                error = GeneratorError(str(e))  # change the error class, required by the worker
+                self.input_queue.put(error)
+
+                if self.verbose:
+                    message = Message(
+                        sender_name="job feeder",
+                        time_value=time.time(),
+                        message="failed to generate job {}".format(jobid),
+                        jobid=jobid)
+
+                    self.message_queue.put(message)
+                break  # go to EndingSignal
+
+            job._jobid = jobid  # attribute the jobid now and once for all
+            job._gentime = (gen_begin, gen_end)
             self.input_queue.put(job)
 
             if self.verbose:
                 message = Message(
                     sender_name="job feeder",
                     time_value=time.time(),
-                    message="put job",
+                    message="put job {}".format(job._jobid),
                     jobid=job._jobid)
 
                 self.message_queue.put(message)

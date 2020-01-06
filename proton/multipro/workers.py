@@ -129,7 +129,7 @@ class Worker(Process):
                 message = Message(
                     sender_name=self.name,
                     time_value=time.time(),
-                    message="got job",
+                    message="got job {}".format(job._jobid),
                     jobid=job._jobid)
                 self.messagequeue.put(message)
 
@@ -188,6 +188,6 @@ class Worker(Process):
                 message = Message(
                     sender_name=self.name,
                     time_value=time.time(),
-                    message="put job",
+                    message="put job {}".format(job._jobid),
                     jobid=job._jobid)
                 self.messagequeue.put(message)

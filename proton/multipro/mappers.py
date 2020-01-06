@@ -8,6 +8,9 @@ import time
 import os
 
 
+ERRORLOGFILE = "protonerrors.log"
+
+
 class Mapper(object):
     def __iter__(self):
         return self
@@ -181,7 +184,7 @@ class MapAsync(Mapper):
                 raise packet
 
             elif isinstance(packet, WorkerError):
-                with open('multiproerrors.log', 'a') as fid:
+                with open(ERRORLOGFILE, 'a') as fid:
                     fid.write(str(packet) + "\n")
 
                 self.communicate(str(packet))
@@ -215,21 +218,28 @@ if __name__ == '__main__':
     import random
 
     def job_generator():
+
         for n in range(32):
             yield Job(t=1.)
+        yield 1.0
 
     def fun(worker, t):
         start = time.time()
         while time.time() - start < t:
             0 + 0
         worker.communicate('I am fine, ' + str(t))
-        raise ValueError('skip me')
+        if worker.rand() < 0.1:
+            raise ValueError('skip me')
+        if worker.rand() < 0.1:
+            raise NameError('skip me')
+        if worker.rand() < 0.1:
+            raise TypeError('skip me')
         return t
 
     with MapAsync(
         function_or_instance=fun,
         job_generator=job_generator(),
-        ignore_exceptions=(ValueError, NameError),
+        ignore_exceptions=(ValueError, NameError, TypeError),
         nworkers=8,
         verbose=True) as ma:
 
