@@ -1,4 +1,5 @@
 from proton import *
+import time
 
 
 def job_generator():
@@ -7,6 +8,9 @@ def job_generator():
 
 
 def fun(i, j):
+    start = time.time()
+    while time.time() - start < 3.:
+        0 + 0
     return i ** 2 + j
 
 
@@ -15,7 +19,7 @@ with MapAsync(
     job_generator=job_generator(),
     ignore_exceptions=[ValueError],
     nworkers=8,
-    taskset=None, #"0-4",
+    affinity="0-3",
     verbose=True,
     lowpriority=True) as ma:
 
