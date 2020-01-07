@@ -21,7 +21,7 @@ class MapAsync(Mapper):
 
     def __init__(self, function_or_instance, job_generator,
                  ignore_exceptions=None,
-                 nworkers=12, taskset=None,
+                 nworkers=12, affinity=None,
                  verbose=False, lowpriority=False):
 
         self.ignore_exceptions = \
@@ -32,7 +32,7 @@ class MapAsync(Mapper):
             assert issubclass(exception, Exception)
 
         self.nworkers = nworkers
-        self.taskset = taskset
+        self.affinity = affinity
         self.verbose = verbose
         self.lowpriority = lowpriority
         self.ppid = os.getpid()
@@ -109,7 +109,7 @@ class MapAsync(Mapper):
         if self.printer is not None:
             self.pids.append(self.printer.pid)
 
-        self.settask()
+        self.set_affinity()
         self.renice()
 
         return self
@@ -145,22 +145,30 @@ class MapAsync(Mapper):
             if self.printer is not None:
                 self.printer.terminate()
 
-    def settask(self):
-        if self.taskset is None:
-            return
+    def affinity_to_taskset_command(self):
+        if "-" in self.affinity:
 
-        if "-" in self.taskset:
-            corestart, coreend = [int(x) for x in self.taskset.split('-')]
-            assert coreend > corestart >= 0
+            corestart, coreend = self.affinity.split('-')
+            corestart = int(corestart)
+            coreend = int(coreend)
+            if not coreend > corestart >= 0:
+                raise ValueError('taskset command not understood {}'.format(self.affinity))
+
             cmd = "taskset -pca %d-%d %%d" % (corestart, coreend)
             cmd = "\n".join([cmd % pid for pid in self.pids])
 
         else:
-            corestart = coreend = int(self.taskset)
-            assert coreend == corestart >= 0
-            cmd = "taskset -pca %d %%d" % (corestart)
+            corestart = coreend = int(self.affinity)
+            if not coreend == corestart >= 0:
+                raise ValueError('taskset command not understood {}'.format(self.affinity))
+            cmd = "taskset -pca %d %%d" % corestart
             cmd = "\n".join([cmd % pid for pid in self.pids])
+        return cmd
 
+    def set_affinity(self):
+        if self.affinity is None:
+            return
+        cmd = self.affinity_to_taskset_command()
         os.system(cmd)
 
     def renice(self):
