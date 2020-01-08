@@ -60,7 +60,8 @@ class MultiLine(object):
                 self.reset_termsize()
                 continue
 
-        if refresh: self.refresh()
+        if refresh:
+            self.refresh()
 
     def move(self, line0):
         self.line0 = line0

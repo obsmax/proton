@@ -28,7 +28,9 @@ class Message(object):
 class MessageQueue(BasicQueue):
 
     def put(self, message, **kwargs):
-        assert isinstance(message, Message) or isinstance(message, EndingSignal)
+        if not isinstance(message, Message) or isinstance(message, EndingSignal):
+            raise TypeError("expected object of type {} or {}, got {}".format(
+                str(Message), str(EndingSignal), str(type(message))))
         super(MessageQueue, self).put(message, **kwargs)
 
 
