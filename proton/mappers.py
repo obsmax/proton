@@ -2,7 +2,7 @@ from proton.workers import Worker, WorkerOutput
 from proton.errors import GeneratorError, EndingSignal, WorkerError
 from proton.messages import Message, MessageQueue, BasicPrinter
 from proton.ioqueue import InputQueue, OutputQueue
-from proton.target import Target
+from proton.processingtarget import ProcessingTarget
 from proton.jobs import JobFeeder, Job
 import time, random
 import os
@@ -67,7 +67,7 @@ class MapAsync(Mapper):
         seedstmp = [random.random() * 100000
                     for _ in range(self.nworkers)]
 
-        target = Target(function_or_instance=function_or_instance)  # will be deep copied !! times self.nworkers
+        target = ProcessingTarget(function_or_instance=function_or_instance)  # will be deep copied !! times self.nworkers
 
         for i in range(self.nworkers):
 

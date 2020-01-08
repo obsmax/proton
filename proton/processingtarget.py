@@ -2,7 +2,7 @@ import inspect
 from proton.errors import ArgumentError
 
 
-class Target(object):
+class ProcessingTarget(object):
     def __init__(self, function_or_instance):
         """
         :param function_or_instance:
@@ -82,10 +82,10 @@ if __name__ == '__main__':
             print(worker, x, self.y)
             return x * 2
 
-    t0 = Target(fun0)
-    t1 = Target(fun1)
-    t2 = Target(Fun2(222))
-    t3 = Target(Fun3(333))
+    t0 = ProcessingTarget(fun0)
+    t1 = ProcessingTarget(fun1)
+    t2 = ProcessingTarget(Fun2(222))
+    t3 = ProcessingTarget(Fun3(333))
 
     t0(1, worker=1)
     t1(1, worker=1)

@@ -5,7 +5,7 @@ import sys
 from multiprocessing import Process
 from proton.jobs import Job
 from proton.messages import Message, MessageQueue
-from proton.target import Target
+from proton.processingtarget import ProcessingTarget
 from proton.errors import EndingSignal, GeneratorError, WorkerError
 
 
