@@ -1,5 +1,5 @@
 import inspect
-from proton.multipro.errors import ArgumentError
+from proton.errors import ArgumentError
 
 
 class Target(object):

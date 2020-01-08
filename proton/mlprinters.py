@@ -1,6 +1,6 @@
 from multiprocessing import Process, Queue
 from multiprocessing.queues import Empty as EmptyQueueError
-from proton.communication.multiline import MultiLine
+from proton.multiline import MultiLine
 import curses
 import numpy as np
 import time
@@ -16,7 +16,7 @@ class ExitedMultilinePrinterError(Exception):
     pass
 
 
-class InterruptionSignal(object):
+class InterruptionSignal(Exception):
     pass
 
 
@@ -133,133 +133,13 @@ class InteractivePrinter(Process):
                 print(l)
 
 
-# class NoPrinter(object):
-#     """use that printer to shut the processes up"""
-#
-#     def __init__(self, noqueue):
-#         self.pid = -1
-#         # messagequeue is None
-#
-#     def start(self):
-#         return
-#
-#     def join(self):
-#         return
-#
-#     def terminate(self):
-#         return
-#
-#     def communicate(self, message):
-#         print(message)
-#
-#
-# class BasicPrinter(Process):
-#     """standard printing to stdout"""
-#
-#     def __init__(self, messagequeue):
-#         Process.__init__(self)
-#         self.messagequeue = messagequeue
-#
-#     def communicate(self, message):
-#         print(message)
-#
-#     def run(self):
-#         while True:
-#             packet = self.messagequeue.get()
-#             if isinstance(packet, InterruptionSignal):
-#                 break
-#             sender, tim, mess, jobid = packet
-#             message = "{} at {} : {} ".format(sender + " " * (20 - len(sender)), str(hhmmss(tim)), mess)
-#             if jobid is not None:
-#                 message += str(jobid)
-#             print(message)
-#         return
-#
-#
-# class ProcessPrinter(InteractivePrinter):
-#     def __init__(self, messagequeue):
-#         InteractivePrinter.__init__(self, maxlines=1000, message_queue=messagequeue)
-#
-#     def communicate(self, message):
-#         self.message_queue.put(("User", time.time(), message, None))
-#
-#     def interpretor(self, tup):
-#         if isinstance(tup, InterruptionSignal):
-#             return -1, "exit iso"  # send the exit signal to the printer
-#
-#         sender, tim, mess, jobid = tup
-#
-#         if sender == "InputQueue":
-#             line = 0
-#             message = "%s at %s : %s " % (sender + " " * (20 - len(sender)), str(hhmmss(tim)), mess)
-#             if jobid is not None: message += str(jobid)
-#         elif sender.split('-')[0] == "Worker":
-#             line = int(sender.split('-')[-1])
-#             message = "%s at %s : %s " % (sender + " " * (20 - len(sender)), str(hhmmss(tim)), mess)
-#             if jobid is not None: message += str(jobid)
-#         elif sender == "MessageQueue":
-#             line = -1
-#             message = sender + mess
-#         elif sender == "User":
-#             line = -1
-#             message = mess
-#         else:  # raise Exception('message not understood')
-#             line = -1
-#             message = mess
-#         return line, message
-#
-#
-# class JobPrinter(InteractivePrinter):
-#     def __init__(self, messagequeue):
-#         InteractivePrinter.__init__(self, maxlines=100000, message_queue=messagequeue)
-#
-#     def communicate(self, message):
-#         self.message_queue.put(("User", time.time(), message, None))
-#
-#     def interpretor(self, tup):
-#         if isinstance(tup, InterruptionSignal):
-#             return -1, "exit iso"  # send the exit signal to the printer
-#
-#         sender, tim, mess, jobid = tup
-#         if sender == "User":
-#             line = -1
-#             message = mess
-#         elif jobid is None:
-#             line = -1
-#             message = mess
-#         elif isinstance(jobid, int):
-#             line = jobid
-#             if sender == "InputQueue":
-#                 message = "Job%d%s at %s  : %s" % (jobid, " " * (10 - len(str(jobid))), hhmmss(tim), sender)
-#             elif "Worker" in sender:
-#                 if "got" in mess:
-#                     message = message = "Job%d%s at %s  : %s" % (jobid, " " * (10 - len(str(jobid))), hhmmss(tim), sender)
-#                 elif "put" in mess:
-#                     message = message = "Job%d%s at %s  : %s" % (jobid, " " * (10 - len(str(jobid))), hhmmss(tim), "done")
-#                 elif "fail" in mess:
-#                     message = message = "Job%d%s at %s  : %s" % (
-#                         jobid, " " * (10 - len(str(jobid))), hhmmss(tim), "failed (see /tmp/multiproerrors.log)")
-#                 else:
-#                     line, message = -1, mess
-#             else:
-#                 line, message = -1, mess
-#         else:
-#             line, message = -1, mess
-#         return line, message
-#
-#
-# class FakePrinter(object):
-#     def communicate(self, message):
-#         print(message)
-
-
 if __name__ == '__main__':
     p = InteractivePrinter(maxlines=3, message_queue=None)
 
     p.message_queue.put((0, 'hello world[0]'))
     p.message_queue.put((1, 'hello world[1]'))
     p.message_queue.put((2, 'hello world[2]'))
-    p.message_queue.put(InterruptionSignal)
+    p.message_queue.put(InterruptionSignal())
 
     p.start()
     p.join()

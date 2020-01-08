@@ -77,17 +77,24 @@ class MultiLine(object):
 if __name__ == '__main__':
     import time
     with MultiLine(maxlines=3) as ml:
-        ml.write(0, "hello world")
-        time.sleep(0.1)
-        ml.write(1, "hello world")
-        time.sleep(0.1)
-        ml.write(2, "hello world")
-        time.sleep(0.1)
-        ml.write(0, "<<<")
-        time.sleep(0.1)
-        ml.write(1, "<<<")
-        time.sleep(0.1)
-        ml.write(2, "<<<")
+        ml.write(0, "write to line 0")
+        time.sleep(0.3)
+
+        ml.write(1, "write to line 1")
+        time.sleep(0.3)
+
+        ml.write(2, "write to line 2")
+        time.sleep(0.3)
+
+        ml.write(0, "correct line 0")
+        time.sleep(0.3)
+
+        ml.write(1, "correct line 1")
+        time.sleep(0.3)
+
+        ml.write(2, "correct line 2")
         ml.communicate("it works !!!")
         time.sleep(1.0)
 
+        ml.communicate("bye")
+        time.sleep(1.0)

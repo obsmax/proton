@@ -1,9 +1,9 @@
-from proton.multipro.workers import Worker, WorkerOutput
-from proton.multipro.errors import GeneratorError, EndingSignal, WorkerError
-from proton.multipro.messages import Message, MessageQueue, BasicPrinter
-from proton.multipro.ioqueue import InputQueue, OutputQueue
-from proton.multipro.target import Target
-from proton.multipro.jobs import JobFeeder, Job
+from proton.workers import Worker, WorkerOutput
+from proton.errors import GeneratorError, EndingSignal, WorkerError
+from proton.messages import Message, MessageQueue, BasicPrinter
+from proton.ioqueue import InputQueue, OutputQueue
+from proton.target import Target
+from proton.jobs import JobFeeder, Job
 import time, random
 import os
 

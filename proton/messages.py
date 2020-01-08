@@ -1,7 +1,7 @@
 from multiprocessing import Process
-from proton.multipro.ioqueue import BasicQueue
-from proton.communication.printcolors import printblue
-from proton.multipro.errors import EndingSignal
+from proton.ioqueue import BasicQueue
+from proton.printcolors import printblue
+from proton.errors import EndingSignal
 import time
 
 

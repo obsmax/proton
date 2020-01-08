@@ -1,6 +1,11 @@
 import time
 import signal
 
+"""
+interrupt execution of a protected area 
+after a given time
+"""
+
 
 class TimeOutError(Exception):
     pass
@@ -31,5 +36,6 @@ def workfor(t):
 
 
 if __name__ == '__main__':
+
     with TimeLimiter(3):
         workfor(10.)

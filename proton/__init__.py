@@ -1,2 +1,2 @@
-from proton.multipro.jobs import Job
-from proton.multipro.mappers import MapAsync
+from proton.jobs import Job
+from proton.mappers import MapAsync

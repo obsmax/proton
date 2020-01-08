@@ -3,10 +3,10 @@ import time
 import traceback
 import sys
 from multiprocessing import Process
-from proton.multipro.jobs import Job
-from proton.multipro.messages import Message, MessageQueue
-from proton.multipro.target import Target
-from proton.multipro.errors import EndingSignal, GeneratorError, WorkerError
+from proton.jobs import Job
+from proton.messages import Message, MessageQueue
+from proton.target import Target
+from proton.errors import EndingSignal, GeneratorError, WorkerError
 
 
 class WorkerOutput(object):

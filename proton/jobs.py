@@ -1,8 +1,8 @@
 from multiprocessing import Process
 from typing import Union
-from proton.multipro.messages import MessageQueue, Message
-from proton.multipro.ioqueue import InputQueue
-from proton.multipro.errors import EndingSignal, GeneratorError
+from proton.messages import MessageQueue, Message
+from proton.ioqueue import InputQueue
+from proton.errors import EndingSignal, GeneratorError
 import time
 
 

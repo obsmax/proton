@@ -19,9 +19,9 @@ class TerminateProtected(object):
 
     def _handler(self, signum, frame):
         if signum == signal.SIGINT:
-            logging.error("Received SIGINT. Finishing this block, then exiting.")
+            logging.error("\nReceived SIGINT. Finishing this block, then exiting.")
         elif signum == signal.SIGTERM:
-            logging.error("Received SIGTERM. Finishing this block, then exiting.")
+            logging.error("\nReceived SIGTERM. Finishing this block, then exiting.")
         else:
             raise Exception('programming error')
         self.killed = True
@@ -48,11 +48,11 @@ if __name__ == '__main__':
 
     with TerminateProtected():
         # start a process whatever
-        print("Please try pressing ctrl+c while the sleep is running!")
-        sleep(10)
+        print("Please press ctrl+c, the execution will continue")
+        sleep(3)
 
         # these operations will run even though user has pressed ctrl+c
         print("Finished anyway!")
 
     # these operations won't run if the user has pressed ctrl+c
-    print("This only prints if there was no sigint or sigterm")
+    print("This only prints if there was no sigint or sigterm received")
