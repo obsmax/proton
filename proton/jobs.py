@@ -29,7 +29,7 @@ class JobFeeder(Process):
 
     def run(self):
         # operates in the generator workspace
-        jobid = 0
+        jobid = -1
         while True:
             try:
                 gen_begin = time.time()

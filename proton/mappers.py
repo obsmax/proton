@@ -199,7 +199,8 @@ class MapAsync(Mapper):
                 with open(ERRORLOGFILE, 'a') as fid:
                     fid.write(str(packet) + "\n")
 
-                self.communicate(str(packet))
+                if self.verbose:
+                    self.communicate(str(packet))
                 message, errtype, errvalue = packet.args
                 if errtype not in self.ignore_exceptions:
                     # fatal error
