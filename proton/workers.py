@@ -90,6 +90,9 @@ class Worker(Process):
         # ------
 
     def acquire(self):
+        if self.lock is None:
+            raise Exception('cannot acquire the lock, since no lock was provided when initating the mapper')
+
         if self.is_locked:
             raise Exception('{} is already locked'.format(self.name))
         self.is_locked = True

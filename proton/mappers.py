@@ -1,3 +1,4 @@
+from multiprocessing import Lock
 from proton.workers import Worker, WorkerOutput
 from proton.errors import GeneratorError, EndingSignal, WorkerError
 from proton.messages import Message, MessageQueue, BasicPrinter
@@ -22,7 +23,9 @@ class MapAsync(Mapper):
     def __init__(self, function_or_instance, job_generator,
                  ignore_exceptions=None,
                  nworkers=12, affinity=None,
-                 verbose=False, lowpriority=False):
+                 lock=None,
+                 verbose=False,
+                 lowpriority=False):
 
         self.ignore_exceptions = \
             ignore_exceptions if ignore_exceptions is not None else []
@@ -35,6 +38,7 @@ class MapAsync(Mapper):
         self.affinity = affinity
         self.verbose = verbose
         self.lowpriority = lowpriority
+        self.lock = lock
         self.ppid = os.getpid()
 
         # -----------
@@ -48,7 +52,7 @@ class MapAsync(Mapper):
         # ----------- create the input and output queues
         self.input_queue = InputQueue(maxsize=self.nworkers)
         self.output_queue = OutputQueue(maxsize=self.nworkers)
-        # do not increase maxsize, there is always a better explaination
+        # do not increase maxsize, there is always a better explanation
         # if the code is slow
 
         # -----------
@@ -79,7 +83,7 @@ class MapAsync(Mapper):
                 ignore_exceptions=self.ignore_exceptions,
                 seed=seedstmp[i],  # in case two mapasync run at the same time
                 parent=self,
-                lock=None)  # self.lock)
+                lock=self.lock)
             worker.name = "Worker_{:04d}".format(i + 1)
             self.workers.append(worker)
 
