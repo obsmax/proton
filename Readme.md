@@ -1,7 +1,6 @@
 # PROTON
 
 [![Build Status](https://travis-ci.com/obsmax/proton.svg?branch=master)](https://travis-ci.com/obsmax/proton)
-[![Build Status](https://travis-ci.com/obsmax/proton.svg?branch=dev)](https://travis-ci.com/obsmax/proton) 
 
 Parallelization helper for python based on python-multiprocessing
 
