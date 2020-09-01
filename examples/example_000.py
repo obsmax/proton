@@ -52,3 +52,5 @@ with MapAsync(
         # worker_output.answer
 
         # WARNING : with MapAsync, the job order is not preserved, use jobid to reorder
+
+    # New : Use MapSync instead of MapAsync to preserve the input job order
