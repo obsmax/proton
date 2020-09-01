@@ -20,6 +20,10 @@ class WorkerError(Exception):
         return "{}: {}, {}".format(errtype, errvalue, message)
 
 
+class WaitingQueueFullError(Exception):
+    pass
+
+
 if __name__ == '__main__':
     w = WorkerError(
         message='toto',

@@ -10,7 +10,7 @@ from proton.errors import EndingSignal, GeneratorError, WorkerError
 
 
 class WorkerOutput(object):
-    def __init__(self, jobid=None, answer=None, generator_time=None, processor_time=None):
+    def __init__(self, jobid=None, answer=None, generator_time=(0., 0.), processor_time=(0., 0.)):
         self.jobid = jobid
         self.answer = answer
         self.generator_time = generator_time

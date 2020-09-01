@@ -5,6 +5,7 @@ from proton.messages import Message, MessageQueue, BasicPrinter
 from proton.ioqueue import InputQueue, OutputQueue
 from proton.processingtarget import ProcessingTarget
 from proton.jobs import JobFeeder, Job
+from proton.waitingqueue import WaitingQueue
 import time, random
 import os
 
@@ -189,6 +190,7 @@ class MapAsync(Mapper):
     def __next__(self):
         if not self.nactive:
             raise StopIteration
+
         while self.nactive:
             packet = self.output_queue.get()
 
@@ -205,6 +207,7 @@ class MapAsync(Mapper):
 
                 if self.verbose:
                     self.communicate(str(packet))
+
                 message, errtype, errvalue = packet.args
                 if errtype not in self.ignore_exceptions:
                     # fatal error
@@ -220,7 +223,6 @@ class MapAsync(Mapper):
                 raise TypeError(type(packet))
 
         if self.verbose:
-
             message = Message(
                 sender_name="Mapper",
                 time_value=time.time(),
@@ -228,11 +230,50 @@ class MapAsync(Mapper):
                 jobid=None)
             self.message_queue.put(message)
             self.message_queue.put(EndingSignal())
+
         raise StopIteration
 
 
-if __name__ == '__main__':
+class MapSync(MapAsync):
 
+    def __init__(self, *args, **kwargs):
+        if 'ignore_exceptions' in kwargs.keys() and len(kwargs['ignore_exceptions']):
+            raise NotImplementedError("ignore_exceptions not handled by MapSync")
+
+        super(MapSync, self).__init__(*args, **kwargs)
+
+    def __iter__(self):
+        # jobs that come up too soon are kept in a waiting queue to preserve the input order
+        return WaitingQueue(self, verbose=self.verbose, message_queue=self.message_queue)
+
+
+if __name__ == '__main__':
+    import numpy as np
+
+    def job_generator():
+        for n in range(32):
+            running_time = np.random.rand() * 3.
+            yield Job(running_time=running_time)
+
+    def fun(running_time):
+        start = time.time()
+        while time.time() - start < running_time:
+            0 + 0
+        return running_time
+
+    with MapSync(
+        function_or_instance=fun,
+        job_generator=job_generator(),
+        nworkers=8,
+        verbose=True) as ma:
+
+        print(ma)
+        for _ in ma:
+            pass
+
+    exit()
+
+    # =================
     def job_generator():
 
         for n in range(32):
