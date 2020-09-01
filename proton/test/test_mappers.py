@@ -22,7 +22,7 @@ def test_mapasync():
 
 def test_mapsync():
 
-    runtimes = np.linspace(0.02, 0.01, 10)
+    runtimes = np.linspace(0.2, 0.1, 10)
     ordered_jobids = np.arange(len(runtimes))
 
     def job_generator():
