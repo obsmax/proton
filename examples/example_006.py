@@ -3,11 +3,9 @@ from proton import *
 import numpy as np
 
 '''
-Parallelize cumulative processing using StackAsync
-In this example I want to compute the mean of a list 
-each thread will average the number it receives 
-and return a partial mean
-the StackAsync mapper will then compute the total mean
+Parallelize a cumulative processing using StackAsync
+In this example I show how to compute the mean of a list of numbers 
+split over several threads
 '''
 
 
