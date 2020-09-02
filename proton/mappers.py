@@ -1,5 +1,5 @@
 from multiprocessing import Lock
-from proton.workers import Worker, WorkerOutput
+from proton.workers import Worker, WorkerOutput, Stacker, StackerOutput
 from proton.errors import GeneratorError, EndingSignal, WorkerError
 from proton.messages import Message, MessageQueue, BasicPrinter
 from proton.ioqueue import InputQueue, OutputQueue
@@ -245,6 +245,30 @@ class MapSync(MapAsync):
     def __iter__(self):
         # jobs that come up too soon are kept in a waiting queue to preserve the input order
         return WaitingQueue(self, verbose=self.verbose, message_queue=self.message_queue)
+
+
+class StackAsync(MapAsync):
+    whichworker = Stacker
+
+    def stack(self):
+        ans = StackerOutput(stacker_name="StackAsync")
+        for stacker_output in self:
+
+            if self.verbose:
+                message = Message(
+                    sender_name="StackAsync",
+                    time_value=time.time(),
+                    # message=f"added {len(stacker_output.jobids)} more prestack job(s) "
+                    #         f"from {stacker_output.stacker_name} "
+                    #         f"to the grand total")
+                    message=f"got the prestack result from {stacker_output.stacker_name} \n"
+                            f"{stacker_output} ")
+
+                self.message_queue.put(message)
+
+            ans += stacker_output
+
+        return ans
 
 
 if __name__ == '__main__':

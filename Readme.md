@@ -40,3 +40,6 @@ Use a callable class for target
 
 * examples/example_005.py  
 Use locks
+
+* examples/example_006.py  
+Parallelize a cumulative processing

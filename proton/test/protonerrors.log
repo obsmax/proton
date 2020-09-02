@@ -1,0 +1,6 @@
+<class 'AssertionError'>: , Worker Worker_0001 failed while executing job 0
+    Traceback (most recent call last):
+      File "/home/max/prog/git/proton/proton/workers.py", line 339, in run
+    assert hasattr(answer, "__iadd__")
+    AssertionError
+
