@@ -3,7 +3,7 @@ import time
 import numpy as np
 
 
-def test_mapasync():
+def test_mapasync_basic_workflow():
 
     def job_generator():
         for i in range(10):
@@ -18,6 +18,39 @@ def test_mapasync():
             i, j = worker_output.answer
             assert worker_output.jobid == i
             assert worker_output.jobid == j / 2
+
+
+def test_parallelization():
+
+    njob = 2
+    def job_generator():
+        yield Job(sleep_for=1.)
+        yield Job(sleep_for=1.)
+
+    def fun(sleep_for):
+        time.sleep(sleep_for)
+        return 0
+
+    # serial
+    serial_time = time.time()
+    for job in job_generator():
+        fun(*job.args, **job.kwargs)
+    serial_time = time.time() - serial_time
+
+    # parallel
+    parallel_time = time.time()
+    with MapAsync(function_or_instance=fun,
+                  job_generator=job_generator(),
+                  nworkers=2) as ma:
+        list(ma)
+    parallel_time = time.time() - parallel_time
+
+    # parallel run should be faster
+    assert parallel_time < serial_time
+
+    # parallel run should be 2 times faster, leave 10% uncertainty
+    print(abs(2 * parallel_time - serial_time) / serial_time)
+    assert abs(2 * parallel_time - serial_time) / serial_time < 0.1
 
 
 def test_mapsync():
