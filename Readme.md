@@ -13,11 +13,11 @@ Parallelization helper for python based on python-multiprocessing
 
 ## Install
 ```bash
-# cd installation/path
+# cd <to/installation/path>
 git clone https://github.com/obsmax/proton
-conda create -n py3 python=3.7  
-conda activate py3
-conda install --yes --file requirements.txt
+conda create -n neutron python=3.7 --yes
+conda activate neutron
+cd proton
 pip install -e .
 ```
 

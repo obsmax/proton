@@ -15,9 +15,9 @@ install:
   - conda update -q conda
   # Useful for debugging any issues with conda
   - conda info -a
-  - conda create -n py3 python=3.7
-  - source activate py3
-  - conda install --yes --file requirements.txt pytest # pytest-cov codecov
+  - conda create -n neutron python=3.7
+  - source activate neutron
+  - conda install --yes pytest # pytest-cov codecov
   - pip install -e .
 #  - mkdir -p $HOME/.config/matplotlib
 #  - touch $HOME/.config/matplotlib/matplotlibrc

@@ -43,8 +43,8 @@ class WorkerOutput(object):
         ans_cut = str(self.answer).split('\n')[0]
         return f"{self.__class__.__name__}:\n\t" \
                f"job:{self.jobid}\n\t" \
-               f"gentime:{self.elapsed_generator_time() * 1e6:.2f}ms\n\t" \
-               f"protime:{self.elapsed_processor_time() * 1e6:.2f}ms\n\t" \
+               f"gentime:{self.elapsed_generator_time() * 1e3:.2f}ms\n\t" \
+               f"protime:{self.elapsed_processor_time() * 1e3:.2f}ms\n\t" \
                f"answer:{ans_cut}"
 
 
@@ -246,8 +246,8 @@ class StackerOutput(WorkerOutput):
         return f"{self.__class__.__name__}: \n\t" \
                f"stacker:{self.stacker_name}\n\t" \
                f"jobs:{jobids_cut}\n\t" \
-               f"gentime:{self.generator_time * 1e6:.2f}ms\n\t" \
-               f"protime:{self.processor_time * 1e6:.2f}ms\n\t" \
+               f"gentime:{self.generator_time * 1e3:.2f}ms\n\t" \
+               f"protime:{self.processor_time * 1e3:.2f}ms\n\t" \
                f"answer:{ans_cut}"
 
     def __iadd__(self, other):
