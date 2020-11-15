@@ -2,3 +2,4 @@ from proton.printcolors import printblue, printyellow, printred, printgreen, pri
 from proton.jobs import Job
 from proton.mappers import MapAsync, MapSync, StackAsync, StackerOutput
 from proton.timelimiter import TimeLimiter
+from multiprocessing import Lock

@@ -1,4 +1,4 @@
-from multiprocessing import Lock
+from multiprocessing import Lock, cpu_count
 from proton.workers import Worker, WorkerOutput, Stacker, StackerOutput
 from proton.errors import GeneratorError, EndingSignal, WorkerError
 from proton.messages import Message, MessageQueue, BasicPrinter
@@ -23,7 +23,7 @@ class MapAsync(Mapper):
 
     def __init__(self, function_or_instance, job_generator,
                  ignore_exceptions=None,
-                 nworkers=12, affinity=None,
+                 nworkers=None, affinity=None,
                  lock=None,
                  verbose=False,
                  lowpriority=False):
@@ -35,7 +35,7 @@ class MapAsync(Mapper):
             assert isinstance(exception, type)
             assert issubclass(exception, Exception)
 
-        self.nworkers = nworkers
+        self.nworkers = nworkers if nworkers is not None else cpu_count()
         self.affinity = affinity
         self.verbose = verbose
         self.lowpriority = lowpriority
