@@ -15,10 +15,10 @@ install:
   - conda update -q conda
   # Useful for debugging any issues with conda
   - conda info -a
-  - conda create -n neutron python=3.7
-  - source activate neutron
-  - conda install --yes pytest # pytest-cov codecov
-  - pip install -e .
+  - conda create -n py38-proton python=3.8
+  - source activate py38-proton
+  # - conda install --yes pytest # pytest-cov codecov
+  - python -m pip install -e .
 #  - mkdir -p $HOME/.config/matplotlib
 #  - touch $HOME/.config/matplotlib/matplotlibrc
 # - echo "backend : Agg" > $HOME/.config/matplotlib/matplotlibrc

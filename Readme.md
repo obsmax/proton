@@ -15,10 +15,11 @@ Parallelization helper for python based on python-multiprocessing
 ```bash
 # cd <to/installation/path>
 git clone https://github.com/obsmax/proton
-conda create -n neutron python=3.7 --yes
-conda activate neutron
+conda create -n py38-proton python=3.8 --yes
+conda activate py38-proton
 cd proton
-pip install -e .
+python -m pip install -e .
+
 ```
 
 ## Usage examples

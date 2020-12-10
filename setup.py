@@ -32,5 +32,5 @@ setuptools.setup(
     classifiers=[
         "Programming Language :: Python :: 3"
         "Operating System :: Linux"],
-    install_requires=['numpy', ],
+    install_requires=['numpy', 'pytest'],
     python_requires='>=3')
