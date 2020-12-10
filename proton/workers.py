@@ -49,8 +49,9 @@ class WorkerOutput(object):
 
 
 class Worker(Process):
-    def __init__(self, target, inputqueue, outputqueue, messagequeue, ignore_exceptions=None, seed=None,
-                 parent=None, lock=None):
+    def __init__(self, target, inputqueue, outputqueue, messagequeue,
+                 ignore_exceptions=None, seed=None,
+                 parent=None, lock=None, verbose:bool = False):
         """
         :param target: a Target object, the function or object to call inside the dedicated workspaces
         :param inputqueue: a InputQueue object, the queue that transmit jobs from the main workspace inside the dedicated workspaces
@@ -73,7 +74,7 @@ class Worker(Process):
             assert issubclass(exception, Exception)
 
         self.seed = seed
-        self.verbose = messagequeue is not None  # not NoPrinter
+        self.verbose = verbose  # not NoPrinter
         self.parent = parent
         self.is_locked = False
         self.lock = lock
@@ -110,6 +111,9 @@ class Worker(Process):
             return [self.rand_() for i in range(N)]
 
     def communicate(self, message):  # !#
+        if self.messagequeue is None:
+            raise Exception('no messagequeue provided')
+
         message = Message(
             sender_name=self.name,
             time_value=time.time(),

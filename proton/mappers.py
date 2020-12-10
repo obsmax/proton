@@ -42,13 +42,10 @@ class MapAsync(Mapper):
         self.lock = lock
         self.ppid = os.getpid()
 
-        # -----------
-        self.message_queue = None
-        self.printer = None
-
-        if self.verbose:
-            self.message_queue = MessageQueue(maxsize=1000)
-            self.printer = BasicPrinter(self.message_queue)
+        # ----------- message queue and message printer thread
+        # needed even in non-verbose mode (for worker.communicate)
+        self.message_queue = MessageQueue(maxsize=1000)
+        self.printer = BasicPrinter(self.message_queue)
 
         # ----------- create the input and output queues
         self.input_queue = InputQueue(maxsize=self.nworkers)
@@ -63,7 +60,8 @@ class MapAsync(Mapper):
         self.job_feeder = JobFeeder(
             job_generator=job_generator,
             input_queue=self.input_queue,
-            message_queue=self.message_queue)
+            message_queue=self.message_queue,
+            verbose=self.verbose)
 
         # ----------- determine if each worker will have a distinct target or not
         self.workers = []
@@ -84,7 +82,8 @@ class MapAsync(Mapper):
                 ignore_exceptions=self.ignore_exceptions,
                 seed=seedstmp[i],  # in case two mapasync run at the same time
                 parent=self,
-                lock=self.lock)
+                lock=self.lock,
+                verbose=self.verbose)
             worker.name = "Worker_{:04d}".format(i + 1)
             self.workers.append(worker)
 
@@ -131,8 +130,8 @@ class MapAsync(Mapper):
 
             self.input_queue.close()
             self.output_queue.close()
-            if self.verbose:
-                self.message_queue.close()
+            self.message_queue.close()
+
             if self.printer is not None:
                 self.printer.join()
         else:
@@ -140,7 +139,7 @@ class MapAsync(Mapper):
             # if self.verbose:print "killing workers and queues"
 
             self.input_queue.close()
-            if self.verbose:
+            if self.message_queue is not None:  # better test than self.verbose
                 self.message_queue.close()
             self.output_queue.close()
 
@@ -229,6 +228,9 @@ class MapAsync(Mapper):
                 message="got EndingSignal",
                 jobid=None)
             self.message_queue.put(message)
+
+        if self.message_queue is not None:
+            # not related to verbose mode
             self.message_queue.put(EndingSignal())
 
         raise StopIteration

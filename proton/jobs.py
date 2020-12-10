@@ -20,12 +20,13 @@ class Job(object):
 class JobFeeder(Process):
     def __init__(
             self, job_generator, input_queue: InputQueue,
-            message_queue: Union[MessageQueue, None] = None):
+            message_queue: Union[MessageQueue, None] = None,
+            verbose: bool = False):
         super().__init__()
         self.job_generator = job_generator
         self.input_queue = input_queue
         self.message_queue = message_queue
-        self.verbose = self.message_queue is not None
+        self.verbose = verbose
 
     def run(self):
         # operates in the generator workspace
