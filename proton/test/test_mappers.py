@@ -55,7 +55,7 @@ def test_parallelization():
 
 def test_mapsync():
 
-    runtimes = np.linspace(0.2, 0.1, 10)
+    runtimes = np.linspace(2.0, 1.0, 10)
     ordered_jobids = np.arange(len(runtimes))
 
     def job_generator():
@@ -76,8 +76,8 @@ def test_mapsync():
 
         sync_jobids = np.asarray([worker_output.jobid for worker_output in ma], int)
 
-    assert np.all(async_jobids == ordered_jobids[::-1])
     assert np.all(sync_jobids == ordered_jobids)
+    assert np.all(async_jobids == ordered_jobids[::-1])  # hazardous
 
 
 def test_stacker():
